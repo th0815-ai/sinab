@@ -124,3 +124,21 @@ h2 {
     .hero { padding: 100px 15px 40px; }
 }
 
+/* FIXED: Center ALL sections */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Content wrapper for perfect centering */
+section > * {
+    max-width: 800px;
+    width: 100%;
+}
