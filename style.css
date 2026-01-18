@@ -1,11 +1,12 @@
 /* Reset & base */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { 
-    font-family: 'Inter', sans-serif; 
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
     background: #0a0a0a; 
     color: white; 
     line-height: 1.6;
-    cursor: none; /* Hide default cursor */
+    cursor: none;
+    overflow-x: hidden;
 }
 
 /* Custom cursor */
@@ -36,33 +37,48 @@ nav a {
     text-decoration: none;
     margin-left: 20px;
     font-weight: 300;
+    font-size: 1rem;
     transition: color 0.3s ease;
 }
 nav a:hover { color: #ff6b6b; }
 
-/* Hero */
+/* HERO - FIXED CENTERING */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 120px 20px 60px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.hero-content {
+    max-width: 800px;
+    width: 100%;
     padding: 0 20px;
 }
 .hero h1 { 
     font-size: clamp(3rem, 8vw, 8rem); 
     margin-bottom: 1rem;
+    line-height: 1.1;
 }
 .hero h2 { 
     font-size: clamp(1.5rem, 4vw, 2.5rem); 
-    opacity: 0.8;
+    opacity: 0.9;
     margin-bottom: 1rem;
+    font-weight: 300;
+}
+.hero p {
+    font-size: 1.3rem;
+    opacity: 0.8;
+    max-width: 600px;
 }
 
 /* Sections */
 section {
-    padding: 100px 20px;
+    padding: 120px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -78,6 +94,8 @@ h2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .project-card {
     background: rgba(255,255,255,0.05);
@@ -93,6 +111,16 @@ h2 {
 
 /* Responsive */
 @media (max-width: 768px) {
-    nav { right: 10px; }
-    nav a { font-size: 0.9rem; margin-left: 10px; }
+    nav { 
+        top: 15px; 
+        right: 15px; 
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav a { 
+        margin-left: 0; 
+        font-size: 0.95rem; 
+    }
+    .hero { padding: 100px 15px 40px; }
 }
+
