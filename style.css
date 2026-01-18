@@ -33,14 +33,14 @@ nav {
     z-index: 1000;
 }
 nav a {
-    color: white;
+    color: #333333 !important;
     text-decoration: none;
     margin-left: 20px;
     font-weight: 300;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
-nav a:hover { color: #ff6b6b; }
+nav a:hover { color: #ff6b6b !important; }
 
 /* HERO - FIXED CENTERING */
 .hero {
@@ -98,7 +98,7 @@ h2 {
     margin: 0 auto;
 }
 .project-card {
-    background: rgba(255,255,255,0.05);
+    background: rgba(0,0,0,0.05);
     padding: 2rem;
     border-radius: 12px;
     transition: all 0.3s ease;
