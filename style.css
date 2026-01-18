@@ -1,0 +1,98 @@
+/* Reset & base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    font-family: 'Inter', sans-serif; 
+    background: #0a0a0a; 
+    color: white; 
+    line-height: 1.6;
+    cursor: none; /* Hide default cursor */
+}
+
+/* Custom cursor */
+#cursor {
+    position: fixed;
+    width: 24px;
+    height: 24px;
+    background: #ff6b6b;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+nav a:hover { color: #ff6b6b; }
+
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+.hero h1 { 
+    font-size: clamp(3rem, 8vw, 8rem); 
+    margin-bottom: 1rem;
+}
+.hero h2 { 
+    font-size: clamp(1.5rem, 4vw, 2.5rem); 
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+/* Sections */
+section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    opacity: 0.9;
+}
+
+/* Project grid */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+.project-card {
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+.project-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255,107,107,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav { right: 10px; }
+    nav a { font-size: 0.9rem; margin-left: 10px; }
+}
